@@ -1,0 +1,160 @@
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+    --bg-color: #0d0e15;
+    --surface-color: #16192b;
+    --primary-color: #00ffcc;
+    --secondary-color: #ff007f;
+    --text-color: #f0f0f3;
+    --text-muted: #8b8fa3;
+    --border-color: rgba(0, 255, 204, 0.2);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* --- CONTENEDOR Y TARJETA --- */
+.auth-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 204, 0.05);
+}
+
+/* --- HEADER / LOGO --- */
+.auth-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+}
+
+.auth-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- FORMULARIO --- */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    background-color: #101221;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.25);
+}
+
+/* --- BOTÓN SUBMIT --- */
+.auth-btn {
+    background: linear-gradient(135deg, var(--primary-color), #00b386);
+    color: #0d0e15;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+    transition: all var(--transition-speed) ease;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.auth-btn:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.4);
+    transform: translateY(-1px);
+}
+
+/* --- FOOTER --- */
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: text-shadow 0.2s;
+}
+
+.auth-footer a:hover {
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+}
